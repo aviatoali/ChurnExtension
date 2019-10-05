@@ -1,0 +1,31 @@
+{
+    "name": "ChurnExtension",
+    "version": "1.0",
+    "description": "Extension that controls playback speed of videos by offering a popup slider",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16x16.png",
+            "48": "images/icon48x48.png",
+            "128": "images/icon128x128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16x16.png",
+        "48": "images/icon48x48.png",
+        "128": "images/icon128x128.png"
+    },
+    "manifest_version": 2
+}
